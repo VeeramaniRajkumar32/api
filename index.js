@@ -8,6 +8,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use(catRouter);
+app.use(require('./router/mailRoute.js'))
 
 app.listen(PORT, async () => {
   console.log(`server up on port ${PORT}`);
